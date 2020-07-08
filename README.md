@@ -18,18 +18,18 @@ A Docker Compose workflow for local Laravel development.
 > **Usage:** docker-compose run --rm git [YOUR_GIT_COMMAND]
 
 # Deploy a Laravel project
-##Change values
+## Change values
 Change the default values in **docker-compose.yml** file.
 > For example change the NGINX port and **MySQL environment values**.
 
 
-##Start containers
+## Start containers
 ```sh
 docker-compose up -d --build
 ```
 
 
-##Create project files
+## Create project files
 Copy files manually
 
 ```sh
@@ -48,13 +48,13 @@ docker-compose run --rm create-project --prefer-dist laravel/laravel .
 
 > **Note:** Don't forget the dot in the end of the command
 
-##Set permissions
+## Set permissions
 ```sh
 docker-compose exec nginx chmod -R 777 /var/www/html/storage
 docker-compose exec nginx chmod -R 775 /var/www/html/bootstrap
 ```
 
-##Create the .env file
+## Create the .env file
 ```sh
 cp src/.env.example src/.env
 ```
@@ -64,7 +64,7 @@ cp src/.env.example src/.env
 
 
 
-##Artisan commands
+## Artisan commands
 Generate Application key
 ```sh
 docker-compose run --rm artisan key:generate
